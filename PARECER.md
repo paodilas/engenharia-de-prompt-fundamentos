@@ -69,23 +69,6 @@ A maior reflexão que esta unidade provocou foi a mudança de perspectiva sobre 
 
 A Unidade II consolidou uma visão equilibrada e madura sobre a colaboração humano-IA no desenvolvimento de software. Ficou claro que as ferramentas de programação assistida por IA representam uma evolução significativa na produtividade, mas exigem responsabilidade, senso crítico e transparência por parte de quem as utiliza. O aprendizado desta unidade será incorporado como uma prática contínua: usar a IA com consciência, validar o que é gerado, documentar as escolhas e manter a autoria intelectual sobre cada linha de código implementada.
 
----
-
-## 📚 Fontes de Pesquisa
-
-**Materiais da disciplina:**
-- OLIVEIRA, Kadidja Valéria. *Sprint: Automação e Programação Assistida por IA.* UDF, Aula 17/04/2026.
-- OLIVEIRA, Kadidja Valéria. *Guia de Boas Práticas na Colaboração Humano-IA.* UDF, Aula 24/04/2026.
-- OLIVEIRA, Kadidja Valéria. *Unidade 02 – Orientações sobre as Atividades Práticas.* UDF, 2026.
-- OLIVEIRA, Kadidja Valéria. *Encerramento Unidade 2 – Roteiro da Aula.* UDF, 24/04/2026.
-
-**Referências bibliográficas citadas em aula:**
-- LEE, P.; GOLDBERG, C.; KOHANE, I. *The AI Revolution in Medicine.* Pearson, 2024.
-- BARCAUI, A. *Inteligência Artificial e Segurança.* 2025.
-- CÓRDOVA, R. *Transparência em Sistemas de IA.* 2025.
-- MURTA, L. *Diálogo Estruturado no Desenvolvimento Guiado por Comentários.* 2023.
-- MELLO, F. *Propriedade Intelectual e IA.* 2024.
-
 **Ferramentas de IA utilizadas:**
 - **Claude (Anthropic)** — apoio na organização e redação do parecer, com revisão e validação do conteúdo pelo autor.
 - **GitHub Copilot** — utilizado durante as atividades práticas para sugestões de código inline e refatoração.
