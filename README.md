@@ -1,20 +1,95 @@
-### Passo 2: Arquivo README.md
+# 🤖 Unidade II — Programação Assistida por IA
 
-**Registro de Comparação Prática:**
-
-* **Prompt Genérico:** "Como conseguir clientes para gestão de redes sociais?"
-  * **Resposta:** Para conseguir clientes, você pode usar o Instagram para divulgar seu trabalho, fazer anúncios no Facebook Ads, participar de eventos de networking e oferecer pacotes com desconto no início para criar um portfólio. 
-
-* **Prompt Estruturado:** "Atue como um estrategista de marketing digital. Sugira táticas de captação dos primeiros clientes para a minha recém-criada agência de social media, a Dreamy, focando em atrair pequenos empreendedores locais..."
-  * **Resposta (Simulada):** Como estrategista, recomendo estas 3 táticas iniciais para a Dreamy:
-    1. **Auditoria Expressa Gratuita:** Aborde os donos de negócios locais oferecendo uma análise rápida e amigável do Instagram deles...
-    2. **Case de Sucesso Próprio (Showcase):** Use a sua própria estrutura ou projetos parceiros (como a Deux Amis Doceria Gourmet) para criar um portfólio impecável...
-    3. **Pacote de Entrada Focado:** Crie um pacote inicial mais acessível focado em padronização visual e planejamento de um mês de conteúdo básico...
+**Disciplina:** Engenharia de Prompt e Aplicações em IA  
+**Instituição:** Centro Universitário UDF  
+**Professora:** Kadidja Valéria  
 
 ---
 
-### Passo 3: Análise Crítica
+## 📁 Estrutura do Repositório
 
-A resposta gerada pelo prompt estruturado foi infinitamente mais útil e alinhada aos meus objetivos reais. O prompt genérico trouxe conselhos vagos e teóricos que se aplicam a qualquer pessoa na internet. 
+```
+unidade2/
+│
+├── 📄 README.md              ← Este arquivo
+├── 📝 PARECER.md             ← Parecer individual da Unidade II
+│
+├── 🧮 basico/
+│   ├── calculadora.py        ← Calculadora com 4 operações
+│   └── README.md
+│
+├── 🔷 intermediario/
+│   ├── jogo_formas.py        ← Jogo educativo de formas geométricas
+│   └── README.md
+│
+├── 🔍 avancado/
+│   ├── consulta_cep.py       ← Consulta à API ViaCEP
+│   └── README.md
+│
+├── 📂 missao01/
+│   ├── organizar_arquivos.py ← Automação de organização por extensão
+│   └── README.md
+│
+├── 🌐 missao02/
+│   ├── consulta_api.py       ← Consulta ViaCEP + depuração com IA
+│   └── README.md
+│
+└── 🚨 missao03/
+    ├── notificacoes.py       ← Sistema de alertas por condição crítica
+    └── README.md
+```
 
-Ao utilizar a fórmula, a estrutura reduziu completamente a ambiguidade ao forçar a IA a entender o momento exato do negócio e o público-alvo específico.
+---
+
+## 🚀 Atividades
+
+### Projetos Práticos
+
+| Nível | Projeto | Descrição |
+|-------|---------|-----------|
+| 🟢 Básico | [Calculadora](./basico/) | 4 operações matemáticas com menu interativo |
+| 🟡 Intermediário | [Jogo das Formas](./intermediario/) | Jogo educativo de formas geométricas |
+| 🔴 Avançado | [Consulta CEP](./avancado/) | API ViaCEP com tratamento de erros completo |
+
+### Missões
+
+| Missão | Projeto | Ferramenta IA |
+|--------|---------|---------------|
+| 01 | [Automação de Arquivos](./missao01/) | Ghostwriter (Replit) |
+| 02 | [Consulta a APIs](./missao02/) | Ghostwriter (Replit) |
+| 03 | [Sistema de Notificações](./missao03/) | GitHub Copilot |
+
+---
+
+## 🧠 Ferramentas de IA Utilizadas
+
+| Ferramenta | Uso principal |
+|------------|--------------|
+| **GitHub Copilot** | Sugestões inline, geração de funções, refatoração |
+| **Ghostwriter (Replit)** | Depuração contextual, correção de requisições, sugestões específicas |
+| **Claude (Anthropic)** | Organização lógica, formulação de prompts, revisão de raciocínio |
+
+---
+
+## 📝 Parecer
+
+O parecer individual sobre a Unidade II está disponível em [`PARECER.md`](./PARECER.md).
+
+---
+
+## ⚙️ Como executar os scripts
+
+**Pré-requisito:** Python 3.x instalado.
+
+Para os scripts que usam a API ViaCEP (avancado e missao02):
+```bash
+pip install requests
+```
+
+Todos os outros scripts usam apenas bibliotecas nativas do Python.
+
+---
+
+## 🔍 Transparência
+
+> Este repositório foi produzido com apoio de ferramentas de IA (GitHub Copilot e Claude), conforme exigido pela metodologia da disciplina. Todo o código gerado foi revisado, validado e ajustado pelo autor. A responsabilidade pelo conteúdo entregue é integralmente do estudante, em conformidade com os princípios éticos discutidos na Unidade II.
