@@ -1,9 +1,9 @@
-# 🤖 Unidade II — Programação Assistida por IA
+# Unidade II — Programação Assistida por IA
 
 **Disciplina:** Engenharia de Prompt e Aplicações em IA  
 **Instituição:** Centro Universitário UDF  
 **Professora:** Kadidja Valéria  
-
+**Aluno:** Matheo Augustus Rocha Bagatini
 ---
 
 ##  Estrutura do Repositório
