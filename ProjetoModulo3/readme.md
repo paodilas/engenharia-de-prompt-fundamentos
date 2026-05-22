@@ -1,10 +1,10 @@
 # 🌙 Dreamy Hub — Projeto Módulo 3: Low Code / No Code / Vibecode
 
-> **Disciplina:** Desenvolvimento de Sistemas  
+> **Disciplina:** engenharia de prompt e aplicações em IA 
 > **Professor(a):** Kadidja Valéria  
 > **Instituição:** UDF Centro Universitário  
 > **Data:** 22/05/2026  
-> **Aluno:** Matheo Bagatini
+> **Aluno:** Matheo Augustus Rocha Bagatini
 
 ---
 
@@ -166,7 +166,7 @@ O vibecode não elimina a necessidade de pensamento técnico — ele **democrati
 
 ## 👥 Colaboração
 
-Este projeto foi desenvolvido individualmente por **Matheo Bagatini**, proprietário da Dreamy Social Media. Todas as decisões de produto, arquitetura, testes e validação foram tomadas pelo desenvolvedor. A IA foi utilizada como ferramenta de implementação, respondendo aos requisitos e correções definidos pelo desenvolvedor humano.
+Este projeto foi desenvolvido individualmente por **Matheo Augustus Rocha Bagatini**, proprietário da Dreamy Social Media. Todas as decisões de produto, arquitetura, testes e validação foram tomadas pelo desenvolvedor. A IA foi utilizada como ferramenta de implementação, respondendo aos requisitos e correções definidos pelo desenvolvedor humano.
 
 ---
 
