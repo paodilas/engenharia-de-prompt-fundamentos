@@ -63,7 +63,7 @@ Banco de Dados (PostgreSQL)  → Railway
 
 ### Abordagem: Vibecode com IA (Claude Sonnet)
 
-Este projeto foi desenvolvido inteiramente através de **engenharia de prompt** — utilizando o Claude (Anthropic) como parceiro de desenvolvimento em conversas iterativas e detalhadas. Nenhuma ferramenta no-code/low-code tradicional foi utilizada; ao invés disso, prompts precisos e bem estruturados guiaram a geração de código real e funcional.
+Este projeto foi desenvolvido inteiramente através de **engenharia de prompt** — utilizando o Claude, Bubble,copilot  como parceiros de desenvolvimento. Nenhuma ferramenta no-code/low-code tradicional foi utilizada; ao invés disso, prompts precisos e bem estruturados guiaram a geração de código real e funcional.
 
 ### Stack Tecnológico
 | Camada | Tecnologia | Justificativa |
