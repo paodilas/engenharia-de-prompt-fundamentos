@@ -24,7 +24,7 @@ O desafio proposto foi o desenvolvimento de um **hub de gestão de clientes para
 ### Credenciais de Acesso para Avaliação
 | Perfil | Login | Senha |
 |--------|-------|-------|
-| Teste (Avaliação) | testeudf | 12345678 |
+| Teste (Avaliação) | testeudf@udf.com.br | 12345678 |
 
 > ℹ️ O perfil de teste permite visualizar o sistema completo na perspectiva do cliente.
 
