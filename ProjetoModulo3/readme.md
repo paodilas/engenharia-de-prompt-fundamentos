@@ -1,6 +1,6 @@
 # 🌙 Dreamy Hub — Projeto Módulo 3: Low Code / No Code / Vibecode
 
-> **Disciplina:** Engenharia de prompt e aplicações em IA 
+> **Disciplina:** Engenharia de Prompt e Aplicações em IA  
 > **Professor(a):** Kadidja Valéria  
 > **Instituição:** UDF Centro Universitário  
 > **Data:** 22/05/2026  
@@ -10,193 +10,150 @@
 
 ## 📌 Desafio Escolhido
 
-O desafio proposto foi o desenvolvimento de um **hub de gestão de clientes para a agência de social media Dreamy**, uma empresa real de Brasília-DF. O sistema precisava resolver um problema concreto: clientes da agência não tinham visibilidade sobre o trabalho realizado para eles , posts planejados, demandas em andamento, pagamentos e métricas de crescimento ficavam dispersos em planilhas e mensagens de WhatsApp.
+O desafio escolhido foi o desenvolvimento de um **hub de gestão de clientes para a agência de social media Dreamy**, empresa real de Brasília-DF. O problema central era que clientes da agência não tinham visibilidade sobre o trabalho realizado — posts planejados, demandas em andamento, pagamentos e métricas ficavam dispersos em planilhas e WhatsApp.
 
-**O desafio central:** construir, do zero, uma plataforma web completa e segura onde cada cliente pudesse acessar exclusivamente seus próprios dados em tempo real, e o administrador pudesse gerenciar todos os clientes a partir de um único painel.
+A solução precisava permitir que cada cliente acessasse exclusivamente seus próprios dados em tempo real, enquanto o administrador gerenciava todos os clientes a partir de um único painel centralizado.
 
 ---
 
 ## 🖥️ Protótipo
 
-### Link de Acesso
-🔗 **[www.dreamysm.com.br](https://www.dreamysm.com.br)**
+🔗 **Link de acesso:** [www.dreamysm.com.br](https://www.dreamysm.com.br)
 
 ### Credenciais de Acesso para Avaliação
 | Perfil | Login | Senha |
 |--------|-------|-------|
 | Teste (Avaliação) | testeudf@udf.com.br | 12345678 |
 
-> ℹ️ O perfil de teste permite visualizar o sistema completo na perspectiva do cliente.
+### Como o protótipo funciona
 
-### Como o Protótipo Funciona
+O sistema possui dois perfis com experiências distintas:
 
-O sistema possui dois perfis distintos com experiências completamente diferentes:
-
-**Perfil Administrador (Dreamy):**
-- Gerencia todos os clientes cadastrados
-- Adiciona posts no calendário editorial de cada cliente
-- Cria e acompanha demandas no kanban (Solicitado → Em andamento → Concluído)
-- Lança pagamentos e contratos
-- Faz upload de imagens para o simulador de feed
-- Visualiza métricas de crescimento por cliente
+**Perfil Administrador:**
+- Cadastra e gerencia clientes
+- Adiciona posts no calendário editorial por cliente
+- Cria demandas e acompanha pelo kanban (Solicitado → Em andamento → Concluído)
+- Lança pagamentos e contratos em PDF
+- Faz upload do feed do Instagram e métricas de crescimento
 
 **Perfil Cliente:**
 - Acessa exclusivamente seus próprios dados
-- Visualiza o calendário de posts agendados
-- Acompanha o status das demandas em tempo real
-- Consulta histórico de pagamentos e contratos
-- Vê o simulador de feed do Instagram
+- Visualiza posts agendados no calendário
+- Acompanha demandas em tempo real
+- Consulta pagamentos, contratos e feed do Instagram
 - Recebe notificações quando o admin atualiza algo
 
-### Arquitetura Técnica
-```
-Frontend (HTML/CSS/JS puro) → Vercel (www.dreamysm.com.br)
-        ↓
-Backend (Node.js + Express) → Railway (API REST)
-        ↓
-Banco de Dados (PostgreSQL)  → Railway
-```
+> Os prints das telas estão na pasta `/docs` do repositório.
 
 ---
 
-## ⚙️ Plataforma e Abordagem Utilizada
+## ⚙️ Plataforma Utilizada
 
-### Abordagem: Vibecode com IA (Claude Sonnet)
+O projeto foi desenvolvido em **três etapas**, utilizando ferramentas distintas para cada fase:
 
-Este projeto foi desenvolvido inteiramente através de **engenharia de prompt** — utilizando o Claude, Bubble,copilot  como parceiros de desenvolvimento. Nenhuma ferramenta no-code/low-code tradicional foi utilizada; ao invés disso, prompts precisos e bem estruturados guiaram a geração de código real e funcional.
+### Etapa 1 — Esboço e Prototipagem Visual: Bubble + Antigravity
 
-### Stack Tecnológico
-| Camada | Tecnologia | Justificativa |
-|--------|-----------|---------------|
-| Frontend | HTML5 + CSS3 + JavaScript puro | Sem dependências externas, arquivo único, fácil deploy |
-| Backend | Node.js + Express | Ecossistema npm rico, compatível com Railway |
-| Banco de Dados | PostgreSQL | Robusto, relacional, suporte a constraints e CASCADE |
-| Deploy Frontend | Vercel | Deploy automático via GitHub, SSL gratuito |
-| Deploy Backend | Railway | PostgreSQL integrado, deploy via GitHub |
-| Autenticação | JWT (jsonwebtoken) | Stateless, seguro, carrega company_id no token |
-| Criptografia | bcrypt | Hash de senhas com salt rounds = 10 |
+O processo começou com a criação do esboço e protótipo visual utilizando **Bubble** e **Antigravity**:
 
-### Justificativa da Abordagem
+- **Bubble** foi utilizado para mapear o fluxo das telas, a estrutura de dados e a lógica de navegação entre os perfis (admin e cliente). Sua interface visual drag-and-drop permitiu validar rapidamente a arquitetura do sistema antes de partir para o desenvolvimento.
 
-A escolha do **vibecode com Claude** foi motivada por:
+- **Antigravity** complementou o processo com a criação do esboço visual da identidade da plataforma — definindo a paleta de cores (navy/creme/gold), hierarquia de componentes e layout geral das telas.
 
-1. **Velocidade de prototipagem:** sistema completo construído em dias, não semanas
-2. **Projeto real com necessidade real:** a Dreamy precisava da ferramenta em produção rapidamente
-3. **Custo zero de desenvolvimento:** sem contratar desenvolvedor sênior
-4. **Controle total do código:** diferente de Bubble ou Webflow, o código gerado é totalmente nosso
-5. **Iteração rápida:** erros corrigidos em minutos através de prompts de correção
+Essa etapa foi essencial para ter clareza sobre **o que precisava ser construído** antes de partir para o código.
+
+### Etapa 2 — Desenvolvimento: Claude (Vibecode via Engenharia de Prompt)
+
+Com o esboço validado no Bubble e Antigravity, o desenvolvimento real foi feito utilizando o **Claude (Anthropic)** como ferramenta de vibecode. Os requisitos mapeados visualmente foram traduzidos em prompts precisos, que guiaram a geração do código completo:
+
+- Frontend: HTML5 + CSS3 + JavaScript → hospedado no Vercel
+- Backend: Node.js + Express → hospedado no Railway
+- Banco de Dados: PostgreSQL → Railway
+- Autenticação: JWT + bcrypt
+
+### Justificativa da combinação de ferramentas
+
+| Ferramenta | Papel no projeto | Por que foi escolhida |
+|-----------|-----------------|----------------------|
+| **Bubble** | Prototipagem do fluxo e estrutura de dados | Interface visual rápida para validar a lógica antes de codar |
+| **Antigravity** | Esboço visual e identidade da plataforma | Facilidade para definir layout e componentes visuais |
+| **Claude** | Desenvolvimento do código completo | Capacidade de gerar sistemas complexos a partir de linguagem natural |
 
 ---
 
 ## ✅ Vantagens Identificadas
 
-### 1. Velocidade de Desenvolvimento Extraordinária
-Um sistema que levaria meses para uma equipe tradicional foi construído em dias. A IA gerou código funcional para autenticação, banco de dados, API REST e frontend completo a partir de descrições em linguagem natural.
+1. **Prototipagem rápida com Bubble:** a interface drag-and-drop do Bubble permitiu mapear todo o fluxo do sistema visualmente em poucas horas, sem escrever uma linha de código. Isso acelerou muito a fase de planejamento.
 
-### 2. Custo Zero de Desenvolvimento
-Todo o stack utilizado é gratuito (Vercel free tier, Railway free tier) e o desenvolvimento não exigiu pagamento a desenvolvedores. O único custo foi o tempo investido na engenharia de prompt.
+2. **Esboço visual com Antigravity:** a ferramenta facilitou a definição da identidade visual e do layout antes do desenvolvimento, evitando retrabalho e garantindo consistência no design final.
 
-### 3. Código 100% Proprietário e Auditável
-Diferente de plataformas no-code como Bubble ou Webflow, o código gerado pertence totalmente ao projeto. É possível auditar, modificar, migrar de plataforma e escalar sem limitações impostas por terceiros.
+3. **Desenvolvimento ágil com Claude:** com o esboço pronto, os prompts para o Claude foram muito mais precisos e objetivos, resultando em código funcional e alinhado com o que havia sido planejado nas etapas anteriores.
 
-### 4. Iteração e Correção em Tempo Real
-Bugs e ajustes foram resolvidos em minutos através de prompts descritivos. O ciclo "problema → prompt → solução → teste" foi extremamente eficiente.
+4. **Controle total sobre o código:** diferente de usar apenas o Bubble para o produto final, o código gerado pelo Claude pertence 100% ao projeto — sem lock-in de plataforma.
 
-### 5. Funcionalidades Avançadas de Segurança
-A IA foi capaz de implementar boas práticas de segurança (rate limiting, sanitização XSS, JWT, bcrypt, isolamento por company_id) que normalmente exigiriam conhecimento técnico especializado.
-
-### 6. Documentação Gerada em Paralelo
-As conversas com o Claude funcionaram como documentação viva do projeto — cada decisão técnica foi justificada e registrada no histórico de prompts.
+5. **Segurança avançada via prompts:** boas práticas como rate limiting, sanitização XSS, isolamento multi-tenant e criptografia bcrypt foram implementadas descrevendo os requisitos em linguagem natural.
 
 ---
 
 ## ⚠️ Limitações Encontradas
 
-### 1. Limite de Créditos e Contexto da IA
-O uso intensivo do Claude exigiu o plano pago (Claude Pro), pois o plano gratuito possui limites de mensagens que se esgotam rapidamente em sessões longas de desenvolvimento. Além disso, em conversas muito extensas, o modelo perde contexto de decisões anteriores, exigindo repetição de instruções e revisão de inconsistências geradas.
+1. **Bubble não sustenta o produto final:** o Bubble foi excelente para o esboço, mas suas limitações de customização visual e performance o tornaram inviável para o produto real — exigindo migrar para desenvolvimento com Claude.
 
-### 2. Dependência de Plataformas Externas (Lock-in)
-O projeto depende de Vercel, Railway e GitHub. Uma mudança de política de preços ou encerramento de serviço pode exigir migração urgente. O Railway, por exemplo, encerrou o plano gratuito ilimitado, impactando diretamente o orçamento do projeto.
+2. **Limite de créditos da IA:** o uso intensivo do Claude exigiu upgrade para o plano pago (Claude Pro), pois o plano gratuito se esgota rapidamente em sessões longas de desenvolvimento.
 
-### 3. Dificuldade com Cache e Deploy
-O Vercel frequentemente serviu versões antigas do código devido ao cache agressivo. A solução exigiu conhecimento técnico sobre como forçar redeployment — algo que um usuário sem background técnico não conseguiria resolver facilmente.
+3. **Perda de contexto em sessões longas:** em conversas muito extensas, o Claude perdeu contexto de decisões anteriores, gerando código inconsistente e exigindo repetição de instruções.
 
-### 4. Latência Geográfica
-O Railway não possui servidores no Brasil. Com servidores nos EUA, cada requisição tem ~450ms de latência, tornando o carregamento inicial mais lento. Resolvido parcialmente com requisições paralelas via `Promise.all`.
+4. **Dificuldade com cache e deploy:** o Vercel frequentemente serviu versões antigas do código, exigindo conhecimento técnico para resolver — algo além do escopo do low-code puro.
 
-### 5. Debugging em Produção
-Erros em produção sem acesso direto ao terminal exigiram estratégias criativas de debugging — como executar queries Node.js localmente conectadas ao banco remoto. A ausência de um ambiente de staging (homologação) foi um risco real durante o desenvolvimento.
-
-### 6. Inconsistência entre Versões Geradas
-Em diferentes sessões, a IA gerou versões conflitantes do mesmo arquivo, causando bugs em produção. A ausência de um sistema de versionamento robusto por parte da IA exigiu atenção manual constante para garantir que a versão correta estava sendo deployada.
+5. **Latência geográfica:** sem servidores no Brasil, cada requisição ao Railway tem ~450ms de latência, impactando a performance do sistema.
 
 ---
 
 ## 📚 Reflexão Crítica
 
-### Como lidamos com as limitações
+O principal aprendizado foi que **as ferramentas low-code e o vibecode com IA funcionam melhor em combinação do que isoladamente**. O Bubble e o Antigravity foram fundamentais na fase de esboço — rápidos, visuais e intuitivos para validar ideias. Já o Claude foi indispensável para transformar esses esboços em um produto real, funcional e seguro.
 
-**Limite de créditos:** O projeto exigiu upgrade para o plano pago do Claude Pro. Para maximizar o uso dos créditos, os prompts foram refinados para serem mais objetivos e incluir sempre o contexto necessário, evitando mensagens desnecessárias.
+**Como as limitações foram contornadas:**
 
-**Latência:** Implementamos carregamento paralelo com `Promise.all`, reduzindo o tempo de carregamento de ~3.5s para ~500ms. Também utilizamos cache local com localStorage para exibir dados instantaneamente enquanto a API carrega em background.
-
-**Cache do Vercel:** Desenvolvemos um processo de deploy confiável — removendo o arquivo do git e recriando, além de adicionar arquivos de configuração que forçam o Vercel a reconhecer o projeto como HTML estático.
-
-**Inconsistência de versões:** Mantivemos um registro das decisões arquiteturais importantes e sempre validamos a versão em produção via console do browser antes de considerar uma feature concluída.
-
-### O que o vibecode pode e o que não pode
-
-O vibecode com IA é **extraordinariamente poderoso** para:
-- Gerar estruturas CRUD completas rapidamente
-- Implementar padrões de segurança conhecidos
-- Criar interfaces funcionais com identidade visual consistente
-- Resolver problemas de lógica de negócio bem descritos
-
-Mas **ainda exige habilidade humana** para:
-- Debugar problemas de ambiente (cache, deploy, variáveis de ambiente)
-- Tomar decisões arquiteturais de longo prazo
-- Garantir consistência entre múltiplas sessões
-- Testar e validar o produto final em produção
-
-### Conclusão
-
-O vibecode não elimina a necessidade de pensamento técnico , ele **democratiza o acesso à implementação técnica**. Um empreendedor com capacidade de descrever bem seus problemas e validar soluções consegue construir software de qualidade profissional sem ser desenvolvedor. Mas precisa entender o suficiente para identificar quando a IA erra e como corrigi-la.
+- **Transição Bubble → Claude:** o esboço feito no Bubble serviu como documentação visual dos requisitos, tornando os prompts para o Claude muito mais precisos e reduzindo inconsistências.
+- **Limite de créditos:** os prompts foram refinados para serem objetivos e incluir sempre o contexto necessário, evitando mensagens desnecessárias que consomem créditos.
+- **Perda de contexto:** as decisões arquiteturais foram registradas e repetidas no início de cada nova sessão com a IA.
+- **Cache do Vercel:** foram adicionados arquivos de configuração (`vercel.json`) que forçam o Vercel a servir o HTML estático corretamente.
+- **Latência:** implementamos `Promise.all` para carregar todos os dados em paralelo, reduzindo o tempo de carregamento de ~3.5s para ~500ms.
 
 ---
 
 ## 👥 Colaboração
 
-Este projeto foi desenvolvido individualmente por **Matheo Augustus Rocha Bagatini**, proprietário da Dreamy Social Media. Todas as decisões de produto, arquitetura, testes e validação foram tomadas pelo desenvolvedor. A IA foi utilizada como ferramenta de implementação, respondendo aos requisitos e correções definidos pelo desenvolvedor humano.
+Este projeto foi desenvolvido individualmente por **Matheo Augustus Rocha Bagatini**, proprietário da Dreamy Social Media. Todas as decisões de produto, arquitetura, testes e validação foram tomadas pelo desenvolvedor. As ferramentas (Bubble, Antigravity e Claude) foram utilizadas como instrumentos de apoio em cada fase do projeto.
 
 ---
 
-## 📝 Registro da Atividade
+## 📝 Registro da Aula
 
 | Campo | Valor |
 |-------|-------|
 | Data | 22/05/2026 |
-| Atividade | Mini-projeto de aplicação com vibecode/IA |
-| Ferramenta principal | Claude (Anthropic) — engenharia de prompt |
+| Atividade | Discussão crítica + mini-projeto de aplicação |
+| Local | Laboratório de informática |
+| Professor(a) | Kadidja Valéria |
 | Repositório | [github.com/paodilas/dreamysm](https://github.com/paodilas/dreamysm) |
 | Deploy | [www.dreamysm.com.br](https://www.dreamysm.com.br) |
-| Professor(a) | Kadidja Valéria |
-| Instituição | UDF Centro Universitário |
 
 ---
 
 ## 🚀 Próximos Passos
 
-### Melhorias Planejadas para o Protótipo
-- **UI/UX avançado:** Animações de entrada, transições suaves e design premium mantendo a identidade visual navy/creme/gold da Dreamy
-- **Gerador de relatório PDF:** Relatório mensal automático com métricas e posts do período
-- **Migração de servidor:** Avaliar alternativas ao Railway com servidores na América do Sul para reduzir latência
+**Melhorias sugeridas para o protótipo:**
+- UI/UX avançado com animações e micro-interações mantendo a identidade visual da Dreamy
+- Gerador de relatório PDF mensal automático com métricas e posts do período
+- Migração para servidor com menor latência para o Brasil
 
-### Possíveis Evoluções para o Projeto Final
-- **Integração com Instagram Graph API:** Sincronizar métricas reais automaticamente
-- **Chat interno:** Canal de comunicação direto entre agência e cliente dentro da plataforma
-- **Assinatura de contratos digital:** Integração com serviço de assinatura eletrônica
-- **Dashboard público:** Versão simplificada do relatório para apresentações sem login
+**Possíveis evoluções para o Projeto Final da Unidade 3:**
+- Integração com Instagram Graph API para sincronizar métricas reais automaticamente
+- Chat interno entre agência e cliente dentro da plataforma
+- Assinatura digital de contratos integrada
+- Dashboard público para apresentações sem necessidade de login
 
 ---
 
-*Projeto desenvolvido com engenharia de prompt avançada usando Claude (Anthropic) | Dreamy Social Media — Brasília, DF*
+*Projeto desenvolvido com Bubble, Antigravity e Claude (Anthropic) | Dreamy Social Media — Brasília, DF*
