@@ -1,6 +1,6 @@
 # 🌙 Dreamy Hub — Projeto Módulo 3: Low Code / No Code / Vibecode
 
-> **Disciplina:** engenharia de prompt e aplicações em IA 
+> **Disciplina:** Engenharia de prompt e aplicações em IA 
 > **Professor(a):** Kadidja Valéria  
 > **Instituição:** UDF Centro Universitário  
 > **Data:** 22/05/2026  
@@ -10,7 +10,7 @@
 
 ## 📌 Desafio Escolhido
 
-O desafio proposto foi o desenvolvimento de um **hub de gestão de clientes para a agência de social media Dreamy**, uma empresa real de Brasília-DF. O sistema precisava resolver um problema concreto: clientes da agência não tinham visibilidade sobre o trabalho realizado para eles — posts planejados, demandas em andamento, pagamentos e métricas de crescimento ficavam dispersos em planilhas e mensagens de WhatsApp.
+O desafio proposto foi o desenvolvimento de um **hub de gestão de clientes para a agência de social media Dreamy**, uma empresa real de Brasília-DF. O sistema precisava resolver um problema concreto: clientes da agência não tinham visibilidade sobre o trabalho realizado para eles , posts planejados, demandas em andamento, pagamentos e métricas de crescimento ficavam dispersos em planilhas e mensagens de WhatsApp.
 
 **O desafio central:** construir, do zero, uma plataforma web completa e segura onde cada cliente pudesse acessar exclusivamente seus próprios dados em tempo real, e o administrador pudesse gerenciar todos os clientes a partir de um único painel.
 
@@ -160,7 +160,7 @@ Mas **ainda exige habilidade humana** para:
 
 ### Conclusão
 
-O vibecode não elimina a necessidade de pensamento técnico — ele **democratiza o acesso à implementação técnica**. Um empreendedor com capacidade de descrever bem seus problemas e validar soluções consegue construir software de qualidade profissional sem ser desenvolvedor. Mas precisa entender o suficiente para identificar quando a IA erra e como corrigi-la.
+O vibecode não elimina a necessidade de pensamento técnico , ele **democratiza o acesso à implementação técnica**. Um empreendedor com capacidade de descrever bem seus problemas e validar soluções consegue construir software de qualidade profissional sem ser desenvolvedor. Mas precisa entender o suficiente para identificar quando a IA erra e como corrigi-la.
 
 ---
 
