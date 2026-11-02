@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Variaveis de ambiente e credenciais
+.env
+.env.*
+*.key
+
+# Pastas geradas pelo organizar_arquivos.py durante testes
+documentos/
+imagens/
+videos/
+audios/
+planilhas/
+apresentacoes/
+outros/
+
+# IDEs e editores
+.vscode/
+.idea/
+.replit
+replit.nix
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
